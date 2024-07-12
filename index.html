@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Text Encryptor</title>
+  </head>
+  <body>
+    <div class="container__logo">
+      <img class="logo" src="./assets/alura.svg" alt="Logo de Alura Latam" />
+    </div>
+    <div class="container__encryptor">
+      <div class="container__encryptor__input">
+        <textarea class="text__area" placeholder="Enter text here"></textarea>
+        <p>
+          <i class="fa-solid fa-circle-exclamation"></i> Only lowercase letters
+          and no accents
+        </p>
+        <div class="container__encryptor__input__buttons">
+          <button class="encrypt__button" onclick="getText();">Encrypt</button>
+          <button class="decrypt__button" onclick="getText();">Decrypt</button>
+        </div>
+      </div>
+      <div class="container__encryptor__output">
+        <img src="./assets/evaluacion.png" alt="Buscando..." />
+        <h1>No message was found</h1>
+        <p>Enter the text you want to encrypt or decrypt.</p>
+        <button class="copy__button" onclick="copyText();">Copy</button>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>Desarrollado por Axel Langerman</p>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

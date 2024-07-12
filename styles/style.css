@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --color-body: lightblue;
+  --color-textarea: darkblue;
+  --color-output: white;
+  --color-decrypt-button: #d8dfe8;
+
+  --font-inter: "Inter", sans-serif;
+}
+
+::placeholder {
+  color: var(--color-textarea);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--color-body);
+}
+
+.container__logo {
+  width: 100%;
+}
+
+.logo {
+  width: 120px;
+  height: 48px;
+  margin: 40px 40px;
+}
+
+.container__encryptor {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container__encryptor__input {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text__area {
+  resize: none;
+  width: 77%;
+  height: 683px;
+  background-color: var(--color-body);
+  color: var(--color-textarea);
+  font-family: var(--font-inter);
+  font-size: 2rem;
+  font-weight: regular;
+  border: none;
+}
+
+.container__encryptor__input p {
+  font-family: var(--font-inter);
+  font-size: 0.75rem;
+  font-weight: regular;
+  opacity: 0.5;
+  margin: 16px 0;
+}
+
+.container__encryptor__input__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  gap: 24px;
+  margin-bottom: 72px;
+}
+
+.container__encryptor__input__buttons button {
+  width: 96%;
+  text-decoration: none;
+  text-align: center;
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  font-weight: regular;
+  border-radius: 32px;
+  padding: 24px;
+}
+
+.encrypt__button {
+  background-color: var(--color-textarea);
+  color: var(--color-output);
+}
+
+.decrypt__button {
+  background-color: var(--color-decrypt-button);
+  color: var(--color-textarea);
+}
+
+.container__encryptor__output {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5% 40px 5%;
+  padding: 0 32px;
+  background-color: var(--color-output);
+  border-radius: 32px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.container__encryptor__output img {
+  width: 100%;
+}
+
+.container__encryptor__output h1 {
+  font-family: var(--font-inter);
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.container__encryptor__output p {
+  font-family: var(--font-inter);
+  font-weight: regular;
+  font-size: 1rem;
+  text-align: center;
+  color: lightgray;
+}
+
+.copy__button {
+  display: none;
+  width: 96%;
+  text-decoration: none;
+  text-align: center;
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  font-weight: regular;
+  border: 2px solid var(--color-textarea);
+  border-radius: 32px;
+  padding: 24px;
+  background-color: var(--color-output);
+  color: var(--color-textarea);
+  margin-top: 300px;
+}
+
+.footer {
+  color: var(--color-output);
+  background-color: var(--color-textarea);
+  padding: 24px;
+  text-align: center;
+  font-family: var(--font-inter);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 31px;
+    height: 50px;
+    margin: 74px 40px;
+  }
+
+  .container__encryptor {
+    flex-direction: column;
+  }
+
+  .container__encryptor__input {
+    width: 100%;
+  }
+
+  .text__area {
+    width: calc(100% - 40px);
+    margin: 0;
+  }
+
+  .container__encryptor__output {
+    width: 77%;
+    padding: 0 32px 32px 32px;
+    margin: 40px 40px 40px 6%;
+  }
+
+  .container__encryptor__output img {
+    display: none;
+  }
+
+  .copy__button {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container__logo {
+    width: 100%;
+  }
+
+  .logo {
+    width: 32px;
+    height: 48px;
+    margin: 24px 16px;
+  }
+
+  .text__area {
+    width: calc(100% - 16px);
+  }
+
+  .container__encryptor__input__buttons {
+    flex-direction: column;
+  }
+}
